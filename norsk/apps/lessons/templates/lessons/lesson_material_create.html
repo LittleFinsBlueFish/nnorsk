@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {{ block.super }} - {{ lesson.title }} - {% trans 'Upload Materials' %}
+{% endblock %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{% trans 'Upload' %}</button>
+  </form>
+{% endblock %}

@@ -8,3 +8,8 @@ dependencies = [
     "django>=6.1.2",
     "pre-commit>=4.7.0",
 ]
+
+[tool.ruff]
+exclude = [
+    "**/migrations/*.py",
+]

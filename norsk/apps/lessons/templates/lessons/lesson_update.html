@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {{ block.super }} - {% trans 'Update Lesson' %}
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{% trans 'Update Lesson' %}</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {{ block.super }} - {{ lesson.title }}
+{% endblock %}
+
+{% block content %}
+  <h1>{{ lesson.title }}</h1>
+  <div>{{ lesson.content|linebreaks }}</div>
+  {% if lesson.materials.all %}
+    <h2>{% trans 'Materials' %}</h2>
+    <ul>
+      {% for material in lesson.materials.all %}
+        <li>
+          <span>{{ material.file.name }}</span>
+          <a href="{% url 'lessons:lesson_delete_materials' material.pk %}">{% trans 'Delete' %}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <div>
+    <a href="{% url 'lessons:lesson_update' lesson.pk %}">{% trans 'Update' %}</a>
+    <a href="{% url 'lessons:lesson_delete' lesson.pk %}">{% trans 'Delete' %}</a>
+    <a href="{% url 'lessons:lesson_upload_materials' lesson.pk %}">{% trans 'Upload Materials' %}</a>
+  </div>
+{% endblock %}

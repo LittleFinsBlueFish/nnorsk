@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {{ block.super }} -{% trans 'Lessons' %}
+{% endblock %}
+
+{% block content %}
+  <div>
+    <a href="{% url 'lessons:lesson_create' %}">{% trans 'Create Lesson' %}</a>
+  </div>
+  {% for lesson in lessons %}
+    <p>
+      <a href="{% url 'lessons:lesson_detail' lesson.pk %}">{{ lesson.title }}</a>
+    </p>
+  {% endfor %}
+{% endblock %}
