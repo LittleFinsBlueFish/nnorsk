@@ -1,0 +1,679 @@
+{
+    "response": [
+        {
+            "type": "verb",
+            "word": "Å bli riven med",
+            "translation": "be carried away"
+        },
+        {
+            "type": "verb",
+            "word": "Å ferdast",
+            "translation": "travel"
+        },
+        {
+            "type": "verb",
+            "word": "Å dyrke",
+            "translation": "grow"
+        },
+        {
+            "type": "verb",
+            "word": "Å vere samdi",
+            "translation": "to be in agreement"
+        },
+        {
+            "type": "verb",
+            "word": "Å drive med",
+            "translation": "carry on"
+        },
+        {
+            "type": "verb",
+            "word": "Å vere freda",
+            "translation": "be protected"
+        },
+        {
+            "type": "verb",
+            "word": "Å bli oppretta",
+            "translation": "to be/established to establish"
+        },
+        {
+            "type": "verb",
+            "word": "Å føretrekke",
+            "translation": "to prefer"
+        },
+        {
+            "type": "verb",
+            "word": "Å vere oppteken (opptatt) av",
+            "translation": "be concerned with"
+        },
+        {
+            "type": "verb",
+            "word": "Å oppføre seg",
+            "translation": "behave oneself"
+        },
+        {
+            "type": "verb",
+            "word": "Å ha lov til",
+            "translation": "be allowed to"
+        },
+        {
+            "type": "verb",
+            "word": "Å handle om",
+            "translation": "be about"
+        },
+        {
+            "type": "verb",
+            "word": "Å slå eit slag for",
+            "translation": "put in a goodword?"
+        },
+        {
+            "type": "verb",
+            "word": "Å verke rart",
+            "translation": "to seen strange"
+        },
+        {
+            "type": "verb",
+            "word": "Å insistere",
+            "translation": "to insist"
+        },
+        {
+            "type": "verb",
+            "word": "Å busette seg",
+            "translation": "to settle"
+        },
+        {
+            "type": "verb",
+            "word": "Å kritisere",
+            "translation": "to criticize"
+        },
+        {
+            "type": "verb",
+            "word": "Å utføre",
+            "translation": "to perform"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei innmark",
+            "translation": "farm land"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei utmark",
+            "translation": "outlying area"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein episode",
+            "translation": "an episode"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein etterforskar",
+            "translation": "investigator"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit faktum",
+            "translation": "fact"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein ferdsel",
+            "translation": "traffic"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein førespurnad",
+            "translation": "request/question"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei foreining",
+            "translation": "association"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei strøymeteneste",
+            "translation": "streaming platform"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein respons",
+            "translation": "response"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei forureining",
+            "translation": "pollution"
+        },
+        {
+            "type": "verb",
+            "word": "Å skaffe",
+            "translation": "acquire"
+        },
+        {
+            "type": "verb",
+            "word": "Å begynne i lære",
+            "translation": "begin apprenticeship"
+        },
+        {
+            "type": "verb",
+            "word": "Å frakte",
+            "translation": "carry"
+        },
+        {
+            "type": "verb",
+            "word": "Å få orden på",
+            "translation": "get in order"
+        },
+        {
+            "type": "verb",
+            "word": "Å grue seg til",
+            "translation": "be nervous"
+        },
+        {
+            "type": "verb",
+            "word": "Å ha råd til",
+            "translation": "afford"
+        },
+        {
+            "type": "verb",
+            "word": "Å markere",
+            "translation": "mark"
+        },
+        {
+            "type": "verb",
+            "word": "Å oppleve",
+            "translation": "to experience"
+        },
+        {
+            "type": "verb",
+            "word": "Å prioritere",
+            "translation": "prioritize"
+        },
+        {
+            "type": "verb",
+            "word": "Å stifte familie",
+            "translation": "to start a family"
+        },
+        {
+            "type": "verb",
+            "word": "Å ta ansvar for",
+            "translation": "take responsibility for"
+        },
+        {
+            "type": "verb",
+            "word": "Å uttrykke",
+            "translation": "express"
+        },
+        {
+            "type": "verb",
+            "word": "Å vekse opp",
+            "translation": "grow up"
+        },
+        {
+            "type": "verb",
+            "word": "Å vere sjølvstendig",
+            "translation": "be independent"
+        },
+        {
+            "type": "verb",
+            "word": "Å lengte",
+            "translation": "yearn"
+        },
+        {
+            "type": "verb",
+            "word": "Å bekymre seg",
+            "translation": "to be worried"
+        },
+        {
+            "type": "verb",
+            "word": "Å betale rekningar",
+            "translation": "pay the bills"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei barneoppdraging",
+            "translation": "child-rearing"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei erfaring",
+            "translation": "experience"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei forplikting",
+            "translation": "obligation"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein havforskar",
+            "translation": "marine researcher"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein innbyggjar",
+            "translation": "resident"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei inntekt",
+            "translation": "income"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein jernbane",
+            "translation": "railway"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei karriere",
+            "translation": "career"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit klima",
+            "translation": "climate"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei midnattssol",
+            "translation": "midnight sun"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit opphav",
+            "translation": "origin"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit opphavsland",
+            "translation": "country of origin"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein oceanografi",
+            "translation": "oceanography"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit parlament",
+            "translation": "parliament"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein sáme",
+            "translation": "<<translation_required>>"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit samfunnsproblem",
+            "translation": "social problem"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei samansetting",
+            "translation": "composition"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit studielån",
+            "translation": "student loan"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit togsamband",
+            "translation": "railway connection"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein turist",
+            "translation": "tourist"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei urbefolkning",
+            "translation": "indigenous people"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei vare",
+            "translation": "product"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit folk",
+            "translation": "country"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit urfolk",
+            "translation": "indigenous people"
+        },
+        {
+            "type": "adjektiv",
+            "word": "Enkel",
+            "translation": "simple"
+        },
+        {
+            "type": "adjektiv",
+            "word": "Hard",
+            "translation": "hard"
+        },
+        {
+            "type": "adjektiv",
+            "word": "Kort",
+            "translation": "short"
+        },
+        {
+            "type": "adjektiv",
+            "word": "Lang",
+            "translation": "long"
+        },
+        {
+            "type": "adjektiv",
+            "word": "Nordleg",
+            "translation": "northly"
+        },
+        {
+            "type": "adjektiv",
+            "word": "Fantastisk",
+            "translation": "<<translation_required>>"
+        },
+        {
+            "type": "adjektiv",
+            "word": "Hyggelig",
+            "translation": "<<translation_required>>"
+        },
+        {
+            "type": "adjektiv",
+            "word": "Økonomisk",
+            "translation": "economical"
+        },
+        {
+            "type": "uttrykk",
+            "word": "Det finst",
+            "translation": "there is"
+        },
+        {
+            "type": "uttrykk",
+            "word": "Kvar einaste dag",
+            "translation": "every single day"
+        },
+        {
+            "type": "uttrykk",
+            "word": "Ikkje så lett",
+            "translation": "not so easy"
+        },
+        {
+            "type": "uttrykk",
+            "word": "Sjølvsagt",
+            "translation": "self-evident"
+        },
+        {
+            "type": "uttrykk",
+            "word": "Det neste",
+            "translation": "the second"
+        },
+        {
+            "type": "uttrykk",
+            "word": "Nettopp",
+            "translation": "precisely, exactly, just"
+        },
+        {
+            "type": "uttrykk",
+            "word": "Slik",
+            "translation": "such"
+        },
+        {
+            "type": "uttrykk",
+            "word": "Samtidig",
+            "translation": "simultaneous"
+        },
+        {
+            "type": "verb",
+            "word": "Å opne dører mot verda og framtida",
+            "translation": "to open doors to the world and the future"
+        },
+        {
+            "type": "verb",
+            "word": "Å ha ansvar for",
+            "translation": "to be responsible for"
+        },
+        {
+            "type": "verb",
+            "word": "Å vere frivillig",
+            "translation": "to be a volunteer"
+        },
+        {
+            "type": "verb",
+            "word": "Å ta utdanning",
+            "translation": "to get an education"
+        },
+        {
+            "type": "verb",
+            "word": "Å skilje mellom",
+            "translation": "to distinguish between"
+        },
+        {
+            "type": "verb",
+            "word": "Å få karakterar",
+            "translation": "to get grades"
+        },
+        {
+            "type": "verb",
+            "word": "Å ha rett til",
+            "translation": "to have rights to"
+        },
+        {
+            "type": "verb",
+            "word": "Å legge til rette for",
+            "translation": "to facilitate"
+        },
+        {
+            "type": "verb",
+            "word": "Å fjerne",
+            "translation": "to remove"
+        },
+        {
+            "type": "verb",
+            "word": "Å vere i lære/Å vere lærling",
+            "translation": "to be apprentice"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit framandspråk",
+            "translation": "foreign language"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit digitalt verktøy",
+            "translation": "digital instrument"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein parallellklasse",
+            "translation": "parallel class"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein historie",
+            "translation": "history"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein kultur",
+            "translation": "culture"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein læring",
+            "translation": "apprentice"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein klassekontekt",
+            "translation": "class representative"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein kontaktlærar",
+            "translation": "contact teacher"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein forelder/ein føresett",
+            "translation": "parent / guardian"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein ungdomsrett",
+            "translation": "youth right"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein utviklingssamtale",
+            "translation": "progress review meeting"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit utdanningsprogram",
+            "translation": "education program"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit opphavsland",
+            "translation": "country of origin"
+        },
+        {
+            "type": "substantiv",
+            "word": "FAU (foreldrerabidsutvalet)",
+            "translation": "Parent Working Committee"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit yrkesfag",
+            "translation": "professional specialization"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit studieprogram",
+            "translation": "degree program"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein studiekompetanse",
+            "translation": "academic study competence"
+        },
+        {
+            "type": "substantiv",
+            "word": "SFO (skulefritidsordning)",
+            "translation": "after school program"
+        },
+        {
+            "type": "verb",
+            "word": "Å vere frilynt",
+            "translation": "to be open-minded"
+        },
+        {
+            "type": "verb",
+            "word": "Å fordjupe seg i",
+            "translation": "either deep/to be consumed"
+        },
+        {
+            "type": "verb",
+            "word": "Å vere nøyd til",
+            "translation": "be forced to"
+        },
+        {
+            "type": "verb",
+            "word": "Å sveitte",
+            "translation": "sweat"
+        },
+        {
+            "type": "verb",
+            "word": "Å myldre rundt",
+            "translation": "swarm around"
+        },
+        {
+            "type": "verb",
+            "word": "Å legge vekt på",
+            "translation": "to emphasize"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit studielån",
+            "translation": "student loan"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit stipend",
+            "translation": "stipend"
+        },
+        {
+            "type": "substantiv",
+            "word": "Lånekassen",
+            "translation": "student loan fund"
+        },
+        {
+            "type": "substantiv",
+            "word": "Formell kompetanse",
+            "translation": "formal qualifications"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit internat",
+            "translation": "internship/boarding school"
+        },
+        {
+            "type": "substantiv",
+            "word": "Eit universitet",
+            "translation": "university"
+        },
+        {
+            "type": "substantiv",
+            "word": "Gummi",
+            "translation": "<<translation_required>>"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein maur",
+            "translation": "ant"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein høgskule",
+            "translation": "high school"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei rekke",
+            "translation": "row/series"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei maurtue",
+            "translation": "anthill"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ein folkehøgskule",
+            "translation": "folk"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei pyse",
+            "translation": "a wimp / coward"
+        },
+        {
+            "type": "substantiv",
+            "word": "Ei lov - lova",
+            "translation": "law"
+        },
+        {
+            "type": "adjektiv",
+            "word": "Keisam",
+            "translation": "boring"
+        }
+    ]
+}

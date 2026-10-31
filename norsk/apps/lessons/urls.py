@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import include, path
 
 from . import views
 
@@ -19,4 +19,5 @@ urlpatterns = [
         views.LessonMaterialsDeleteView.as_view(),
         name="lesson_delete_materials",
     ),
+    path("<uuid:pk>/words/", include("norsk.apps.words.urls", namespace="words")),
 ]

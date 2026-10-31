@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {{ block.super }} -{% trans 'Extract Words' %}
+{% endblock %}
+
+{% block content %}
+  <form method="POST">
+    {% csrf_token %}
+    <button type="submit">{% trans 'Extract Words' %}</button>
+  </form>
+{% endblock %}

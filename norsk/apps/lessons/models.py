@@ -19,7 +19,9 @@ class Lesson(BaseModel, UserOwnedModel):
 
 
 def get_material_upload_path(instance, filename):
-    return f"lesson_materials/{instance.lesson.id}/{filename}"
+    return (
+        f"lesson_materials/{instance.lesson.id}/{instance.id}.{filename.split('.')[-1]}"
+    )
 
 
 class LessonMaterial(BaseModel, UserOwnedModel):
@@ -27,7 +29,7 @@ class LessonMaterial(BaseModel, UserOwnedModel):
         Lesson, on_delete=models.CASCADE, related_name="materials"
     )
     title = models.CharField(max_length=255)
-    file = models.FileField(upload_to=get_material_upload_path)
+    file = models.ImageField(upload_to=get_material_upload_path)
 
     def __str__(self):
         return self.title

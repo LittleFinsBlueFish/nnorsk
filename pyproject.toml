@@ -5,11 +5,19 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "celery>=5.6.3",
+    "crispy-bootstrap5>=2026.9",
     "django>=6.1.2",
+    "django-celery-results>=2.6.0",
+    "django-crispy-forms>=2.7",
+    "google-genai>=2.34.0",
+    "pillow>=13.0.0",
     "pre-commit>=4.7.0",
+    "python-dotenv>=1.2.4",
 ]
 
 [tool.ruff]
 exclude = [
     "**/migrations/*.py",
+    "docs/**"
 ]

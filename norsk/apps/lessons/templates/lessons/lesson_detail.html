@@ -1,27 +1,69 @@
 {% extends 'base.html' %}
-{% load i18n %}
+{% load i18n static %}
 
 {% block title %}
   {{ block.super }} - {{ lesson.title }}
 {% endblock %}
 
 {% block content %}
-  <h1>{{ lesson.title }}</h1>
-  <div>{{ lesson.content|linebreaks }}</div>
+  <nav aria-label="breadcrumb" class="mt-6 mb-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a class="breadcrumb-link" href="{% url 'lessons:lesson_list' %}">{% trans 'Lessons' %}</a>
+      </li>
+      <li class="breadcrumb-divider"></li>
+      <li class="breadcrumb-item">
+        <a class="breadcrumb-link active" href="#">{{ lesson.title }}</a>
+      </li>
+    </ol>
+  </nav>
+  <div class="btn-group mb-3">
+    <a class="theme-primary btn-subtle" type="button" href="{% url 'lessons:lesson_update' lesson.pk %}">{% trans 'Update' %}</a>
+    <a class="theme-danger btn-subtle" type="button" href="{% url 'lessons:lesson_delete' lesson.pk %}">{% trans 'Delete' %}</a>
+    <a class="theme-secondary btn-subtle" type="button" href="{% url 'lessons:lesson_upload_materials' lesson.pk %}">{% trans 'Upload Materials' %}</a>
+    <a class="theme-secondary btn-subtle" type="button" href="{% url 'lessons:words:extract_words' lesson.pk %}">{% trans 'Extract Words' %}</a>
+  </div>
+  <div class="card card-body mb-3">{{ lesson.content|linebreaks }}</div>
   {% if lesson.materials.all %}
     <h2>{% trans 'Materials' %}</h2>
-    <ul>
+    <ul id="materials-gallery">
       {% for material in lesson.materials.all %}
         <li>
-          <span>{{ material.file.name }}</span>
+          <a class="material-link" href="#" data-pswp-src="{{ material.file.url }}" data-pswp-width="{{ material.file.height }}" data-pswp-height="{{ material.file.width }}">{{ material.title }}</a>
           <a href="{% url 'lessons:lesson_delete_materials' material.pk %}">{% trans 'Delete' %}</a>
         </li>
       {% endfor %}
     </ul>
   {% endif %}
-  <div>
-    <a href="{% url 'lessons:lesson_update' lesson.pk %}">{% trans 'Update' %}</a>
-    <a href="{% url 'lessons:lesson_delete' lesson.pk %}">{% trans 'Delete' %}</a>
-    <a href="{% url 'lessons:lesson_upload_materials' lesson.pk %}">{% trans 'Upload Materials' %}</a>
-  </div>
+  {% if lesson.words.all %}
+    <h2>{% trans 'Words' %}</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            {% trans 'Word' %}
+          </th>
+          <th>
+            {% trans 'Type' %}
+          </th>
+          <th>
+            {% trans 'Translation' %}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for word in lesson.words.all %}
+          <tr>
+            <td>{{ word.word }}</td>
+            <td>{{ word.word_type }}</td>
+            <td>{{ word.translation }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
 {% endblock %}
+
+{% block script %}
+  <script src="{% static 'lessons/preview.mjs' %}" type="module"></script>
+{% endblock script %}
