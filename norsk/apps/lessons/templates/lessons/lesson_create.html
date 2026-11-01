@@ -1,14 +1,10 @@
 {% extends 'base.html' %}
-{% load i18n crispy_forms_tags %}
+{% load i18n %}
 
 {% block title %}
   {{ block.super }} - {% trans 'Create Lesson' %}
 {% endblock %}
 
 {% block content %}
-  <form method="post">
-    {% csrf_token %}
-    {{ form|crispy }}
-    <button type="submit">{% trans 'Create Lesson' %}</button>
-  </form>
+  <c-forms.form-page form=form title="{% trans 'Create Lesson' %}" subtitle="{% trans 'Add a new lesson to your collection.' %}" submit_label="{% trans 'Create Lesson' %}" cancel_url="{% url 'lessons:lesson_list' %}" cancel_label="{% trans 'Cancel' %}" />
 {% endblock %}

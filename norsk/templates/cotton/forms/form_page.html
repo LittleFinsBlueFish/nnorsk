@@ -1,0 +1,20 @@
+{% load crispy_forms_tags %}
+<c-vars form="" title="" subtitle="" submit_label="Save" cancel_url="" cancel_label="Cancel" method="post" multipart="" danger="" />
+<c-ui.page-header :title="title" :subtitle="subtitle" />
+<div class="card form-card">
+  <div class="card-body">
+    <form method="{{ method }}"{% if multipart %} enctype="multipart/form-data"{% endif %}>
+      {% csrf_token %}
+      {{ slot }}
+      {{ form|crispy }}
+      <div class="hstack gap-2 flex-wrap mt-4">
+        <button type="submit" class="btn-solid theme-{% if danger %}danger{% else %}primary{% endif %}">
+          {{ submit_label }}
+        </button>
+        {% if cancel_url %}
+          <a class="btn-outline theme-secondary" href="{{ cancel_url }}">{{ cancel_label }}</a>
+        {% endif %}
+      </div>
+    </form>
+  </div>
+</div>

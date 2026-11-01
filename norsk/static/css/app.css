@@ -1,0 +1,26 @@
+:root {
+  --norsk-accent: oklch(0.52 0.13 250);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.navbar-brand::first-letter {
+  color: var(--norsk-accent);
+}
+
+.lesson-content > :last-child {
+  margin-bottom: 0;
+}
+
+.form-card {
+  max-width: 48rem;
+}
+
+.material-thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}

@@ -1,0 +1,24 @@
+{% load i18n %}
+<c-vars lesson=None />
+<article class="card hover-lift h-100">
+  <div class="card-body">
+    <h2 class="card-title h5">
+      <a class="text-decoration-none" href="{{ lesson.get_absolute_url }}">{{ lesson.title }}</a>
+    </h2>
+    <p class="card-text fg-3">{{ lesson.description|truncatewords:24 }}</p>
+    <div class="hstack gap-2 flex-wrap mt-auto">
+      <c-ui.badge theme="primary" variant="subtle">
+        {% blocktranslate count counter=lesson.word_count %}{{ counter }} word{% plural %}{{ counter }} words{% endblocktranslate %}
+      </c-ui.badge>
+      <c-ui.badge theme="secondary" variant="subtle">
+        {% blocktranslate count counter=lesson.material_count %}{{ counter }} material{% plural %}{{ counter }} materials{% endblocktranslate %}
+      </c-ui.badge>
+    </div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center gap-2">
+    <small class="fg-3">{{ lesson.created_at|date:"DATE_FORMAT" }}</small>
+    <c-ui.button href="{{ lesson.get_absolute_url }}" variant="text" size="sm">
+      {% trans "Open lesson" %}
+    </c-ui.button>
+  </div>
+</article>

@@ -1,0 +1,8 @@
+{% load i18n %}
+<c-vars theme="info" dismissible="" />
+<div class="alert theme-{{ theme }} d-flex align-items-start gap-3" role="alert">
+  <div class="flex-grow-1">{{ slot }}</div>
+  {% if dismissible %}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="{% trans 'Close' %}"></button>
+  {% endif %}
+</div>

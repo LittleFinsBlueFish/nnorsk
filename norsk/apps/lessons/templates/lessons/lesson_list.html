@@ -2,16 +2,30 @@
 {% load i18n %}
 
 {% block title %}
-  {{ block.super }} -{% trans 'Lessons' %}
+  {{ block.super }} - {% trans 'Lessons' %}
 {% endblock %}
 
 {% block content %}
-  <div>
-    <a href="{% url 'lessons:lesson_create' %}">{% trans 'Create Lesson' %}</a>
-  </div>
-  {% for lesson in lessons %}
-    <p>
-      <a href="{% url 'lessons:lesson_detail' lesson.pk %}">{{ lesson.title }}</a>
-    </p>
-  {% endfor %}
+  <c-ui.page-header title="{% trans 'Lessons' %}" subtitle="{% trans 'Pick up where you left off.' %}">
+    <c-slot name="actions">
+      <c-ui.button href="{% url 'lessons:lesson_create' %}" variant="solid" theme="primary">
+        {% trans 'Create Lesson' %}
+      </c-ui.button>
+    </c-slot>
+  </c-ui.page-header>
+
+  {% if lessons %}
+    <div class="row row-cols-1 sm:row-cols-2 lg:row-cols-3 g-3">
+      {% for lesson in lessons %}
+        <c-lessons.card lesson=lesson />
+      {% endfor %}
+    </div>
+  {% else %}
+    <c-ui.empty-state title="{% trans 'No lessons yet' %}">
+      <p class="mb-3">{% trans 'Create your first lesson to start learning.' %}</p>
+      <c-ui.button href="{% url 'lessons:lesson_create' %}" variant="solid" theme="primary">
+        {% trans 'Create Lesson' %}
+      </c-ui.button>
+    </c-ui.empty-state>
+  {% endif %}
 {% endblock %}

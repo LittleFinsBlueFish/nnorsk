@@ -11,4 +11,6 @@ class LessonDetailView(LoginRequiredMixin, DetailView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        return queryset.filter(user=self.request.user)
+        return queryset.filter(user=self.request.user).prefetch_related(
+            "materials", "words"
+        )

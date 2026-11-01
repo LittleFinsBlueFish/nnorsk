@@ -1,0 +1,10 @@
+{% load i18n %}
+<c-vars materials=None />
+<section class="mb-4">
+  <h2 class="h4 mb-3">{% trans "Materials" %}</h2>
+  <ul id="materials-gallery" class="row row-cols-1 sm:row-cols-2 lg:row-cols-3 g-3 list-unstyled mb-0">
+    {% for material in materials %}
+      <c-lessons.material-card material=material />
+    {% endfor %}
+  </ul>
+</section>

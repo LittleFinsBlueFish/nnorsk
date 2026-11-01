@@ -2,12 +2,11 @@
 {% load i18n %}
 
 {% block title %}
-  {{ block.super }} -{% trans 'Extract Words' %}
+  {{ block.super }} - {% trans 'Extract Words' %}
 {% endblock %}
 
 {% block content %}
-  <form method="POST">
-    {% csrf_token %}
-    <button type="submit">{% trans 'Extract Words' %}</button>
-  </form>
+  <c-forms.form-page form=form title="{% trans 'Extract Words' %}" subtitle="{{ lesson.title }}" submit_label="{% trans 'Extract Words' %}" cancel_url="{% url 'lessons:lesson_detail' lesson.pk %}" cancel_label="{% trans 'Cancel' %}">
+    <p class="fg-3">{% trans 'Words will be extracted from the lesson materials in the background. Refresh the lesson page in a moment to see the results.' %}</p>
+  </c-forms.form-page>
 {% endblock %}

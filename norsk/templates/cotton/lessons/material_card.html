@@ -1,0 +1,15 @@
+{% load i18n %}
+<c-vars material=None />
+<li class="col">
+  <figure class="card h-100 mb-0">
+    <a class="material-link" href="{{ material.file.url }}" data-pswp-src="{{ material.file.url }}" data-pswp-width="{{ material.file.width }}" data-pswp-height="{{ material.file.height }}">
+      <img class="card-img-top material-thumb" src="{{ material.file.url }}" alt="{{ material.title }}" loading="lazy" />
+    </a>
+    <figcaption class="card-body flex-row align-items-center justify-content-between gap-2">
+      <span class="text-truncate">{{ material.title }}</span>
+      <c-ui.button href="{% url 'lessons:lesson_delete_materials' material.pk %}" variant="text" theme="danger" size="sm">
+        {% trans "Delete" %}
+      </c-ui.button>
+    </figcaption>
+  </figure>
+</li>

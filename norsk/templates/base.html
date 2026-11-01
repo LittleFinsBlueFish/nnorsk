@@ -1,6 +1,7 @@
-{% load i18n %}
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ LANGUAGE_CODE }}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +12,48 @@
     </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous" />
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css" integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/app.css' %}" />
+    {% block extra_head %}{% endblock %}
   </head>
-  <body data-bs-theme="light">
-    <div class="container">
+  <body class="d-flex flex-column min-vh-100" data-bs-theme="light">
+    <nav class="navbar bg-1 border-bottom">
+      <div class="container d-flex flex-wrap align-items-center gap-3">
+        <a class="navbar-brand me-auto" href="{% url 'lessons:lesson_list' %}">Norsk</a>
+        <div class="hstack gap-3">
+          <a class="nav-link{% if request.resolver_match.namespace == 'lessons' %} active{% endif %}" href="{% url 'lessons:lesson_list' %}"{% if request.resolver_match.namespace == 'lessons' %} aria-current="page"{% endif %}>
+            {% trans 'Lessons' %}
+          </a>
+          <a class="nav-link" href="{% url 'admin:index' %}">{% trans 'Admin' %}</a>
+          {% if user.is_authenticated %}
+            <span class="navbar-text d-none md:d-inline">{{ user.email }}</span>
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-4 py-lg-5 flex-grow-1">
+      {% if messages %}
+        <div class="vstack gap-2 mb-4">
+          {% for message in messages %}
+            <c-ui.alert theme="{% if message.tags == 'error' %}danger{% elif message.tags == 'success' %}success{% elif message.tags == 'warning' %}warning{% else %}info{% endif %}" dismissible>
+              {{ message }}
+            </c-ui.alert>
+          {% endfor %}
+        </div>
+      {% endif %}
+
       {% block content %}
 
       {% endblock %}
-    </div>
+    </main>
+
+    <footer class="border-top py-4 mt-auto">
+      <div class="container d-flex flex-wrap justify-content-between gap-2 small fg-3">
+        <span>{% trans 'Learn Norwegian, one lesson at a time.' %}</span>
+        <span>&copy; {% now "Y" %} Norsk</span>
+      </div>
+    </footer>
+
     {% block script %}{% endblock script %}
   </body>
 </html>

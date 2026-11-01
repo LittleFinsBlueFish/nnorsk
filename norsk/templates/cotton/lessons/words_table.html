@@ -1,0 +1,35 @@
+{% load i18n %}
+<c-vars words=None />
+<section class="card">
+  <div class="card-header">
+    <h2 class="h5 mb-0">{% trans "Words" %}</h2>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-hover mb-0">
+      <thead>
+        <tr>
+          <th scope="col">{% trans "Word" %}</th>
+          <th scope="col">{% trans "Type" %}</th>
+          <th scope="col">{% trans "Translation" %}</th>
+          <th scope="col">{% trans "Example" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for word in words %}
+          <tr>
+            <td class="fw-semibold">{{ word.word }}</td>
+            <td>
+              <c-ui.badge theme="secondary" variant="subtle">{{ word.get_word_type_display }}</c-ui.badge>
+            </td>
+            <td>{{ word.translation }}</td>
+            <td class="fg-3">{{ word.example|default:"—" }}</td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td colspan="4" class="fg-3">{% trans "No words extracted yet." %}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>

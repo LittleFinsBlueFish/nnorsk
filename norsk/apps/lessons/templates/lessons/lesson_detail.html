@@ -5,62 +5,48 @@
   {{ block.super }} - {{ lesson.title }}
 {% endblock %}
 
+{% block extra_head %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css" integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
 {% block content %}
-  <nav aria-label="breadcrumb" class="mt-6 mb-3">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a class="breadcrumb-link" href="{% url 'lessons:lesson_list' %}">{% trans 'Lessons' %}</a>
-      </li>
-      <li class="breadcrumb-divider"></li>
-      <li class="breadcrumb-item">
-        <a class="breadcrumb-link active" href="#">{{ lesson.title }}</a>
-      </li>
-    </ol>
-  </nav>
-  <div class="btn-group mb-3">
-    <a class="theme-primary btn-subtle" type="button" href="{% url 'lessons:lesson_update' lesson.pk %}">{% trans 'Update' %}</a>
-    <a class="theme-danger btn-subtle" type="button" href="{% url 'lessons:lesson_delete' lesson.pk %}">{% trans 'Delete' %}</a>
-    <a class="theme-secondary btn-subtle" type="button" href="{% url 'lessons:lesson_upload_materials' lesson.pk %}">{% trans 'Upload Materials' %}</a>
-    <a class="theme-secondary btn-subtle" type="button" href="{% url 'lessons:words:extract_words' lesson.pk %}">{% trans 'Extract Words' %}</a>
-  </div>
-  <div class="card card-body mb-3">{{ lesson.content|linebreaks }}</div>
+  <c-ui.breadcrumbs>
+    <li class="breadcrumb-item">
+      <a class="breadcrumb-link" href="{% url 'lessons:lesson_list' %}">{% trans 'Lessons' %}</a>
+    </li>
+    <li class="breadcrumb-divider"></li>
+    <li class="breadcrumb-item" aria-current="page">
+      <a class="breadcrumb-link active" href="#">{{ lesson.title }}</a>
+    </li>
+  </c-ui.breadcrumbs>
+
+  <c-ui.page-header title="{{ lesson.title }}" subtitle="{{ lesson.description }}">
+    <c-slot name="actions">
+      <c-ui.button href="{% url 'lessons:lesson_update' lesson.pk %}" variant="outline" theme="primary">
+        {% trans 'Update' %}
+      </c-ui.button>
+      <c-ui.button href="{% url 'lessons:lesson_upload_materials' lesson.pk %}" variant="outline" theme="secondary">
+        {% trans 'Upload Materials' %}
+      </c-ui.button>
+      <c-ui.button href="{% url 'lessons:words:extract_words' lesson.pk %}" variant="outline" theme="secondary">
+        {% trans 'Extract Words' %}
+      </c-ui.button>
+      <c-ui.button href="{% url 'lessons:lesson_delete' lesson.pk %}" variant="subtle" theme="danger">
+        {% trans 'Delete' %}
+      </c-ui.button>
+    </c-slot>
+  </c-ui.page-header>
+
+  <section class="card card-body mb-4 lesson-content">
+    {{ lesson.content|linebreaks }}
+  </section>
+
   {% if lesson.materials.all %}
-    <h2>{% trans 'Materials' %}</h2>
-    <ul id="materials-gallery">
-      {% for material in lesson.materials.all %}
-        <li>
-          <a class="material-link" href="#" data-pswp-src="{{ material.file.url }}" data-pswp-width="{{ material.file.height }}" data-pswp-height="{{ material.file.width }}">{{ material.title }}</a>
-          <a href="{% url 'lessons:lesson_delete_materials' material.pk %}">{% trans 'Delete' %}</a>
-        </li>
-      {% endfor %}
-    </ul>
+    <c-lessons.materials :materials="lesson.materials.all" />
   {% endif %}
+
   {% if lesson.words.all %}
-    <h2>{% trans 'Words' %}</h2>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>
-            {% trans 'Word' %}
-          </th>
-          <th>
-            {% trans 'Type' %}
-          </th>
-          <th>
-            {% trans 'Translation' %}
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for word in lesson.words.all %}
-          <tr>
-            <td>{{ word.word }}</td>
-            <td>{{ word.word_type }}</td>
-            <td>{{ word.translation }}</td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+    <c-lessons.words-table :words="lesson.words.all" />
   {% endif %}
 {% endblock %}
 

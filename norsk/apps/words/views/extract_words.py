@@ -1,5 +1,7 @@
 from django import forms
+from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import UpdateView
 
 from norsk.apps.lessons.models import Lesson
@@ -28,4 +30,6 @@ class ExtractWordsView(LoginRequiredMixin, UpdateView):
         # Call the Celery task to parse words from materials
         parse_words_from_materials.delay(str(self.object.id), material_ids)
 
-        return super().form_valid(form)
+        response = super().form_valid(form)
+        messages.success(self.request, _("Word extraction started."))
+        return response
